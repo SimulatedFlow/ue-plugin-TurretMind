@@ -94,6 +94,30 @@ three built-in profiles are created in code and do not depend on any asset.
 
 ---
 
+## The demo map
+
+Everything below lives under `Content/TurretMind/` (mount path `/TurretMind/TurretMind/`) and is there to
+be read, not just watched. It uses nothing but engine primitives — no meshes, no animations, no
+third-party content.
+
+| Asset | What it is |
+|---|---|
+| `Maps/L_TurretMindDemo` | A tower-defence arena: a serpentine path, 40 turrets in four rows either side of it, six walls as sight blockers, top-down camera. |
+| `Profiles/DA_TurretMind_Cannon` | Long reach (5000 cm), slow re-evaluation, leads a 4000 cm/s shell, **Furthest Along Path**. |
+| `Profiles/DA_TurretMind_Machinegun` | Short reach (2500 cm), fast re-evaluation, hitscan, **Nearest**. |
+| `Profiles/DA_TurretMind_Missile` | Longest reach (6500 cm) with a 800 cm dead zone, leads a 2200 cm/s missile, **Highest Threat**, line of sight off — it arcs over cover. |
+| `Blueprints/BP_TurretMindTurret` | Base + a **rotating barrel on its own component**. Its whole tick is `Get Aim Rotation` → `RInterp To` → `Set World Rotation`. That is the entire client-side API in three nodes. |
+| `Blueprints/BP_TurretMindWalker` | An attacker. Walks a fixed path and pushes `Set Path Progress` into its target component; nothing else. |
+| `Blueprints/BP_TurretMindDemoDirector` | Holds the wave at a target size. It spawns and retires attackers — TurretMind itself never creates or destroys anything. |
+| `Blueprints/BP_TurretMindDemoGameMode` | Sets `ATurretMindHUD` as the HUD class, which is what draws the statistics box. |
+| `Blueprints/BP_TurretMindDemoController` | Shows the cursor and puts the overlay on screen. |
+| `UI/WBP_TurretMindDemoHUD` | The button panel. Every button is a single call into `UTurretMindStatics` — wave size, policy override, acquisition budget, line-of-sight override, debug draw, statistics box. |
+
+Open the map, press Play, and watch the `Targets considered` line against `Targets`: that gap is the
+spatial index. Press **Budget 4** and watch `Acquisitions` cap while the barrels keep tracking.
+
+---
+
 ## Quick start — five minutes
 
 ### 1. Put a component on the turret
