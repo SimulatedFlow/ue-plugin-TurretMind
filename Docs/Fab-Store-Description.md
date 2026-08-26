@@ -106,9 +106,10 @@ target is allowed to be anything that moves — including an actor that just set
 * Dependencies: `Core`, `CoreUObject`, `Engine`, `DeveloperSettings`, `RenderCore`. No `UMG`, no
   `AIModule`, no `UnrealEd`.
 * Blueprint and C++, fully documented headers.
-* Win64 — built and verified with `RunUAT BuildPlugin` for this release. Mac and Linux are
-  allow-listed in the `.uplugin` and the code contains nothing platform-specific, but they
-  were not built here and are therefore not claimed as supported.
+* Win64 — built and verified with `RunUAT BuildPlugin` for this release, and the only entry in
+  the `.uplugin`'s `PlatformAllowList`. The code contains nothing platform-specific, so adding
+  Mac, Linux or a console to that list and building it yourself is a one-line change — but those
+  platforms were not built here and are therefore not claimed as supported.
 * Demo map with a tower defence arena: forty turrets, two hundred moving targets, sight-blocking walls,
   and a click-driven HUD for the budgets and policies.
 * Unreal Engine 5.8.

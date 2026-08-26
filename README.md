@@ -32,7 +32,7 @@ traces, and keeps aiming unbudgeted so nothing ever stands still.
 
 ## Requirements
 
-Unreal Engine 5.8 · Windows, Mac, Linux · one runtime module, no third-party libraries.
+Unreal Engine 5.8 · Windows · one runtime module, no third-party libraries.
 
 ---
 

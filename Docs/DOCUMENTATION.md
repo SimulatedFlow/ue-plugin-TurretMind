@@ -35,7 +35,7 @@ spread over frames and cached, and lead prediction hands you the point to aim at
 | | |
 |---|---|
 | **Engine** | Unreal Engine **5.8** (`"EngineVersion": "5.8.0"`). Not tested on 5.7 or earlier. |
-| **Platforms** | **Win64**, **Mac**, **Linux** — the module's `PlatformAllowList`. |
+| **Platforms** | **Win64** — the module's `PlatformAllowList`. |
 | **Module** | One module: `TurretMind`, `Type: Runtime`, `LoadingPhase: PreDefault`. No editor module. |
 | **Dependencies** | `Core`, `CoreUObject`, `Engine`, `DeveloperSettings` (public), `RenderCore` (private). |
 | **Not required** | `AIModule`, `UMG`, `UnrealEd`, Behavior Trees, the perception system, Navigation. |
@@ -48,11 +48,12 @@ The plugin is **runtime code**: the statistics box is drawn on `UCanvas` from `A
 it survives a cooked Shipping build. World-space debug drawing is compiled behind `ENABLE_DRAW_DEBUG`
 and the editor-viewport overlay behind `WITH_EDITOR`, so neither costs anything in Shipping.
 
-### Consoles
+### Mac, Linux and consoles
 
 Not listed. Nothing in the plugin is platform-specific — it is plain gameplay C++ with no third-party
-code — but the `PlatformAllowList` names only the three platforms that were actually built and tested.
-Add a platform to the list in `TurretMind.uplugin` if you build for it yourself.
+code — but the `PlatformAllowList` names only the platform that was actually built and tested, and
+that is Win64. Add a platform to the list in `TurretMind.uplugin` if you build for it yourself; the
+source ships with the plugin, so nothing stops you.
 
 ---
 
