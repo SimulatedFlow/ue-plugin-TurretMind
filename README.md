@@ -26,7 +26,7 @@ traces, and keeps aiming unbudgeted so nothing ever stands still.
 ## Documentation
 
 **Online, free, no account needed:**
-<https://wiki.teufel-engineering.com/en/TurretMind/documentation> — install, policies, budgets,
+<https://github.com/SimulatedFlow/documentation> — install, policies, budgets,
 custom scoring, console commands, limits. The same manual ships with the plugin as
 [`Docs/DOCUMENTATION.md`](Docs/DOCUMENTATION.md), so it is also available offline.
 
