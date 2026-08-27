@@ -752,7 +752,8 @@ Read this section before you build on the plugin. None of it is a bug.
 
 ## Support
 
-* **Documentation / issues:** <https://github.com/SimulatedFlow/ue-plugin-TurretMind>
+* **Documentation (public, no account needed):** <https://wiki.teufel-engineering.com/en/TurretMind/documentation>
+* **Source / issues:** <https://github.com/SimulatedFlow/ue-plugin-TurretMind>
 * **E-mail:** teufelsilvan@gmail.com
 
 When reporting a problem, a screenshot of the statistics box (`TurretMind.Stats 1`) plus your profile's

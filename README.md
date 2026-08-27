@@ -25,10 +25,13 @@ traces, and keeps aiming unbudgeted so nothing ever stands still.
 
 ## Documentation
 
-* [`Docs/DOCUMENTATION.md`](Docs/DOCUMENTATION.md) — install, policies, budgets, custom scoring,
-  console commands, limits.
-* [`Docs/Fab-Store-Description.md`](Docs/Fab-Store-Description.md) — what it is and what it explicitly
-  is not.
+**Online, free, no account needed:**
+<https://wiki.teufel-engineering.com/en/TurretMind/documentation> — install, policies, budgets,
+custom scoring, console commands, limits. The same manual ships with the plugin as
+[`Docs/DOCUMENTATION.md`](Docs/DOCUMENTATION.md), so it is also available offline.
+
+[`Docs/Fab-Store-Description.md`](Docs/Fab-Store-Description.md) describes what the plugin is and
+what it explicitly is not.
 
 ## Requirements
 
